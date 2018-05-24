@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83EF282C-55D7-49C8-9AD6-7717B6FE5E53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Learning.DesignPattern</RootNamespace>
+    <AssemblyName>Learning.DesignPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactoryPattern\AbstractFactoryDemo.cs" />
+    <Compile Include="AbstractFactoryPattern\HeroFactory.cs" />
+    <Compile Include="AbstractFactoryPattern\HondaFactory.cs" />
+    <Compile Include="AbstractFactoryPattern\IBike.cs" />
+    <Compile Include="AbstractFactoryPattern\IScooter.cs" />
+    <Compile Include="AbstractFactoryPattern\IVehicleFactory.cs" />
+    <Compile Include="AbstractFactoryPattern\RegularBike.cs" />
+    <Compile Include="AbstractFactoryPattern\RegularScooter.cs" />
+    <Compile Include="AbstractFactoryPattern\Scooty.cs" />
+    <Compile Include="AbstractFactoryPattern\SportsBike.cs" />
+    <Compile Include="AbstractFactoryPattern\VehicleClient.cs" />
+    <Compile Include="AdapterPattern\ActionProvider.cs" />
+    <Compile Include="AdapterPattern\CaseSystem.cs" />
+    <Compile Include="AdapterPattern\CaseAdapter.cs" />
+    <Compile Include="AdapterPattern\IAction.cs" />
+    <Compile Include="BridgePattern\Implementor\CallSender.cs" />
+    <Compile Include="BridgePattern\Abstraction\CommonTodoCase.cs" />
+    <Compile Include="BridgePattern\Implementor\EmailSender.cs" />
+    <Compile Include="BridgePattern\Implementor\LetterSender.cs" />
+    <Compile Include="BridgePattern\Implementor\SMSSender.cs" />
+    <Compile Include="BridgePattern\Abstraction\SMSTodoCase.cs" />
+    <Compile Include="BridgePattern\Abstraction\TodoCase.cs" />
+    <Compile Include="BridgePattern\Implementor\IActionOperator.cs" />
+    <Compile Include="BuildDesignPattern\BuildDesignPatternDemo.cs" />
+    <Compile Include="BuildDesignPattern\HeroBuilder.cs" />
+    <Compile Include="BuildDesignPattern\HondaBuilder.cs" />
+    <Compile Include="BuildDesignPattern\IVehicleBuilder.cs" />
+    <Compile Include="BuildDesignPattern\Vehicle.cs" />
+    <Compile Include="BuildDesignPattern\VehicleCreator.cs" />
+    <Compile Include="ChainOfResponsibilityPattern\Approver.cs" />
+    <Compile Include="ChainOfResponsibilityPattern\AssistantManager.cs" />
+    <Compile Include="ChainOfResponsibilityPattern\ChainOfResponsibilityPatternDemo.cs" />
+    <Compile Include="ChainOfResponsibilityPattern\Clerk.cs" />
+    <Compile Include="ChainOfResponsibilityPattern\Loan.cs" />
+    <Compile Include="ChainOfResponsibilityPattern\LoanEventArgs.cs" />
+    <Compile Include="ChainOfResponsibilityPattern\Manager.cs" />
+    <Compile Include="CommandPattern\CommandPatternDemo.cs" />
+    <Compile Include="CommandPattern\FlipDownCommand.cs" />
+    <Compile Include="CommandPattern\FlipUpCommand.cs" />
+    <Compile Include="CommandPattern\ICommand.cs" />
+    <Compile Include="CommandPattern\Light.cs" />
+    <Compile Include="CommandPattern\Switch.cs" />
+    <Compile Include="FacadePattern\CarAssessories.cs" />
+    <Compile Include="FacadePattern\CarBody.cs" />
+    <Compile Include="FacadePattern\CarEngine.cs" />
+    <Compile Include="FacadePattern\CarFacade.cs" />
+    <Compile Include="FacadePattern\CarModel.cs" />
+    <Compile Include="CompositePattern\CompositePatternDemo.cs" />
+    <Compile Include="CompositePattern\Contractor.cs" />
+    <Compile Include="CompositePattern\Employee.cs" />
+    <Compile Include="CompositePattern\IEmployed.cs" />
+    <Compile Include="DecoratorPattern\DecoratorPatternDemo.cs" />
+    <Compile Include="DecoratorPattern\HondaCity.cs" />
+    <Compile Include="DecoratorPattern\IVehicle.cs" />
+    <Compile Include="DecoratorPattern\SpecialOffer.cs" />
+    <Compile Include="DecoratorPattern\VehicleDecorator.cs" />
+    <Compile Include="FactoryMethodPattern\ActionFactory\ActionFactory.cs" />
+    <Compile Include="FactoryMethodPattern\ActionFactory\ConcreteActionFactory.cs" />
+    <Compile Include="FactoryMethodPattern\Bike.cs" />
+    <Compile Include="FactoryMethodPattern\ConcreteVehicleFactory.cs" />
+    <Compile Include="FactoryMethodPattern\FactoryPatterDemo.cs" />
+    <Compile Include="FactoryMethodPattern\IFactory.cs" />
+    <Compile Include="FactoryMethodPattern\Scooter.cs" />
+    <Compile Include="FactoryMethodPattern\VehicleFactory.cs" />
+    <Compile Include="FlyweightPattern\FlyweightPatternDemo.cs" />
+    <Compile Include="FlyweightPattern\IShape.cs" />
+    <Compile Include="FlyweightPattern\Circle.cs" />
+    <Compile Include="FlyweightPattern\Rectangle.cs" />
+    <Compile Include="FlyweightPattern\ShapeObjectFactory.cs" />
+    <Compile Include="MementoPattern\Caretaker.cs" />
+    <Compile Include="MementoPattern\Memento.cs" />
+    <Compile Include="MementoPattern\Originator.cs" />
+    <Compile Include="ObserverPattern\Subscribe\ObserverPatterDemo.cs" />
+    <Compile Include="ObserverPattern\Subscribe\Person.cs" />
+    <Compile Include="ObserverPattern\Subscribe\IObserver.cs" />
+    <Compile Include="ObserverPattern\Subscribe\ISubject.cs" />
+    <Compile Include="ObserverPattern\Subscribe\EmailFieldFormatter.cs" />
+    <Compile Include="ObserverPattern\Subscribe\StatusUpdater.cs" />
+    <Compile Include="PrototypePattern\Developer.cs" />
+    <Compile Include="PrototypePattern\IEmployee.cs" />
+    <Compile Include="PrototypePattern\PrototypePatternDemo.cs" />
+    <Compile Include="PrototypePattern\Typist.cs" />
+    <Compile Include="ProxyPattern\IClient.cs" />
+    <Compile Include="ProxyPattern\ProxyClient.cs" />
+    <Compile Include="ProxyPattern\ProxyPatternDemo.cs" />
+    <Compile Include="ProxyPattern\RealClient.cs" />
+    <Compile Include="RepositoryPattern\IStudentRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryPattern\StudentProvider.cs" />
+    <Compile Include="RepositoryPattern\StudentRepository.cs" />
+    <Compile Include="SingletonPatter\Singleton.cs" />
+    <Compile Include="Statepattern\CancelledState.cs" />
+    <Compile Include="Statepattern\IOrderState.cs" />
+    <Compile Include="Statepattern\NewState.cs" />
+    <Compile Include="Statepattern\Order.cs" />
+    <Compile Include="Statepattern\OrderStatus.cs" />
+    <Compile Include="Statepattern\ShippedState.cs" />
+    <Compile Include="Statepattern\StatePatternDemo.cs" />
+    <Compile Include="StrategyPattern\PatterCode\CostCalculationService_WithStrategy.cs" />
+    <Compile Include="StrategyPattern\PatterCode\FedexShippingStrategy.cs" />
+    <Compile Include="StrategyPattern\PatterCode\IShippingStrategy.cs" />
+    <Compile Include="StrategyPattern\PatterCode\SchenkerShippingStrategy.cs" />
+    <Compile Include="StrategyPattern\StrategyPatternDemo.cs" />
+    <Compile Include="StrategyPattern\PatterCode\UpsShippingStrategy.cs" />
+    <Compile Include="StrategyPattern\Address.cs" />
+    <Compile Include="StrategyPattern\MyOrder.cs" />
+    <Compile Include="StrategyPattern\WrongCode\ShippingCostCalculatorService.cs" />
+    <Compile Include="StrategyPattern\ShippingOpteions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Learning.Common\Learning.Common.csproj">
+      <Project>{b685403c-505f-408b-979a-348ba6d7eb95}</Project>
+      <Name>Learning.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

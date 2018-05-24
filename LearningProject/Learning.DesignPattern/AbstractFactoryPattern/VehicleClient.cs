@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using Learning.DesignPattern.FactoryMethodPattern;
+
+namespace Learning.DesignPattern.AbstractFactoryPattern
+{
+    public class VehicleClient
+    {
+        private readonly IBike bike;
+        private readonly IScooter scooter;
+
+        public VehicleClient(IVehicleFactory factory, string type)
+        {
+            bike = factory.GetBike(type);
+            scooter = factory.GetScooter(type);
+        }
+
+        public string GetBikeName()
+        {
+            return bike.Name();
+        }
+
+        public string GetScooterName()
+        {
+            return scooter.Name();
+        }
+    }
+}
